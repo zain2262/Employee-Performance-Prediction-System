@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="result-card">
+
+        <h1>Prediction Result</h1>
+
+        <div class="score-circle">
+            {{ prediction }}
+        </div>
+
+        <h2>{{ message }}</h2>
+
+        {% if prediction == 5 %}
+            <p>Outstanding employee performance. Eligible for promotion and leadership opportunities.</p>
+
+        {% elif prediction == 4 %}
+            <p>Good performance. Continue training and encourage growth.</p>
+
+        {% elif prediction == 3 %}
+            <p>Average performance. Additional coaching can improve productivity.</p>
+
+        {% elif prediction == 2 %}
+            <p>Below average performance. Training and monitoring are recommended.</p>
+
+        {% else %}
+            <p>Poor performance. Immediate improvement plan is recommended.</p>
+
+        {% endif %}
+
+        <a href="/">Predict Again</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

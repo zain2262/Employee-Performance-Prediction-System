@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Employee Performance Prediction</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">
+
+Employee Performance
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/dashboard">Dashboard</a></li>
+
+<li><a href="/charts">Charts</a></li>
+
+<li><a href="/about">About</a></li>
+
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<h1>
+
+Employee Performance Prediction System
+
+</h1>
+
+<p>
+
+Predict employee performance using Machine Learning and Flask.
+
+</p>
+
+<a href="#prediction">
+
+Get Started
+
+</a>
+
+</section>
+
+<!-- Prediction Form -->
+
+<section id="prediction">
+
+<div class="container">
+
+<h2>
+
+Predict Employee Performance
+
+</h2>
+
+<form action="/predict" method="POST">
+
+<!-- Department -->
+
+<div class="form-group">
+
+<label>Department</label>
+
+<select name="Department">
+
+<option value="0">Customer Support</option>
+<option value="1">Engineering</option>
+<option value="2">Finance</option>
+<option value="3">HR</option>
+<option value="4">IT</option>
+<option value="5">Legal</option>
+<option value="6">Marketing</option>
+<option value="7">Operations</option>
+<option value="8">Sales</option>
+
+</select>
+
+</div>
+
+<!-- Gender -->
+
+<div class="form-group">
+
+<label>Gender</label>
+
+<select name="Gender">
+
+<option value="0">Female</option>
+<option value="1">Male</option>
+<option value="2">Other</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Age</label>
+<input type="number" name="Age" required>
+</div>
+
+<div class="form-group">
+
+<label>Job Title</label>
+
+<select name="Job_Title">
+
+<option value="0">Analyst</option>
+<option value="1">Consultant</option>
+<option value="2">Developer</option>
+<option value="3">Engineer</option>
+<option value="4">Manager</option>
+<option value="5">Specialist</option>
+<option value="6">Technician</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Years At Company</label>
+<input type="number" name="Years_At_Company">
+</div>
+
+<div class="form-group">
+
+<label>Education Level</label>
+
+<select name="Education_Level">
+
+<option value="0">Bachelor</option>
+<option value="1">High School</option>
+<option value="2">Master</option>
+<option value="3">PhD</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Monthly Salary</label>
+<input type="number" step="0.01" name="Monthly_Salary">
+</div>
+
+<div class="form-group">
+<label>Work Hours Per Week</label>
+<input type="number" name="Work_Hours_Per_Week">
+</div>
+
+<div class="form-group">
+<label>Projects Handled</label>
+<input type="number" name="Projects_Handled">
+</div>
+
+<div class="form-group">
+<label>Overtime Hours</label>
+<input type="number" name="Overtime_Hours">
+</div>
+
+<div class="form-group">
+<label>Sick Days</label>
+<input type="number" name="Sick_Days">
+</div>
+
+<div class="form-group">
+<label>Remote Work Frequency</label>
+<input type="number" name="Remote_Work_Frequency">
+</div>
+
+<div class="form-group">
+<label>Team Size</label>
+<input type="number" name="Team_Size">
+</div>
+
+<div class="form-group">
+<label>Training Hours</label>
+<input type="number" name="Training_Hours">
+</div>
+
+<div class="form-group">
+<label>Promotions</label>
+<input type="number" name="Promotions">
+</div>
+
+<div class="form-group">
+<label>Employee Satisfaction Score</label>
+<input type="number" step="0.01" name="Employee_Satisfaction_Score">
+</div>
+
+<div class="form-group">
+
+<label>Resigned</label>
+
+<select name="Resigned">
+
+<option value="0">No</option>
+<option value="1">Yes</option>
+
+</select>
+
+</div>
+
+<button type="submit">
+
+Predict Performance
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2025 Employee Performance Prediction System
+</p>
+<p>
+ Made by Zain ul abedin
+</p>
+
+</footer>
+
+</body>
+
+</html>

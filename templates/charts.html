@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Charts</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+Employee Performance
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+<li><a href="/dashboard">Dashboard</a></li>
+<li><a href="/charts">Charts</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="container">
+
+<h1>Employee Performance Analytics</h1>
+
+<div class="graph">
+
+<h2>Performance Distribution</h2>
+
+<img src="{{ url_for('static', filename='images/performance_distribution.png') }}">
+
+</div>
+
+<div class="graph">
+
+<h2>Correlation Heatmap</h2>
+
+<img src="{{ url_for('static', filename='images/heatmap.png') }}">
+
+</div>
+
+<div class="graph">
+
+<h2>Feature Importance</h2>
+
+<img src="{{ url_for('static', filename='images/feature_importance.png') }}">
+
+</div>
+
+</div>
+
+</body>
+
+</html>
