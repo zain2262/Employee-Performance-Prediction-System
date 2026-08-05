@@ -1,4 +1,4 @@
-# 🚀 Employee Performance Prediction System
+# Employee Performance Prediction System
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
@@ -11,7 +11,7 @@ A **Machine Learning-based Employee Performance Prediction System** developed us
 
 ---
 
-# 📌 Project Overview
+#  Project Overview
 
 Employee performance evaluation is an important task in Human Resource Management. This project uses a **Random Forest Classifier** to predict an employee's performance score based on various factors such as:
 
@@ -31,22 +31,22 @@ The prediction is displayed through a user-friendly Flask web application.
 
 ---
 
-# ✨ Features
+# Features
 
 | Feature | Description |
 |----------|-------------|
-| 🤖 Machine Learning Prediction | Predict employee performance using Random Forest |
-| 🌐 Flask Web Application | Interactive web interface |
-| 📊 Dashboard | HR analytics summary |
-| 📈 Charts | Performance Distribution, Heatmap & Feature Importance |
-| 📱 Responsive UI | HTML & CSS responsive design |
-| 🎯 Performance Result | Shows prediction score with performance category |
-| 📋 About Page | Project information |
-| 📞 Contact Page | Contact interface |
+|  Machine Learning Prediction | Predict employee performance using Random Forest |
+|  Flask Web Application | Interactive web interface |
+|  Dashboard | HR analytics summary |
+|  Charts | Performance Distribution, Heatmap & Feature Importance |
+|  Responsive UI | HTML & CSS responsive design |
+|  Performance Result | Shows prediction score with performance category |
+|  About Page | Project information |
+|  Contact Page | Contact interface |
 
 ---
 
-# 🛠 Technologies Used
+#  Technologies Used
 
 ### Programming Language
 
@@ -79,7 +79,7 @@ The prediction is displayed through a user-friendly Flask web application.
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 Employee-Performance-Prediction-System/
@@ -114,33 +114,33 @@ Employee-Performance-Prediction-System/
 
 ---
 
-# ⚙️ Installation Guide
+#  Installation Guide
 
-### 1️⃣ Clone Repository
+### 1️ Clone Repository
 
 ```bash
 git clone https://github.com/Zain_ul_abedin/Employee-Performance-Prediction-System.git
 ```
 
-### 2️⃣ Go to Project Folder
+### 2️ Go to Project Folder
 
 ```bash
 cd Employee-Performance-Prediction-System
 ```
 
-### 3️⃣ Install Dependencies
+### 3️ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run Flask Application
+### 4️ Run Flask Application
 
 ```bash
 python app.py
 ```
 
-### 5️⃣ Open Browser
+### 5️ Open Browser
 
 ```
 http://127.0.0.1:5000
@@ -148,7 +148,7 @@ http://127.0.0.1:5000
 
 ---
 
-# 📊 Machine Learning Workflow
+#  Machine Learning Workflow
 
 ```
 Dataset
@@ -182,7 +182,7 @@ Performance Prediction
 
 # 📷 Project Screenshots
 
-## 🏠 Home Page
+##  Home Page
 
 > Add screenshot here
 
@@ -192,7 +192,7 @@ screenshots/home.png
 
 ---
 
-## 📊 Dashboard
+##  Dashboard
 
 > Add screenshot here
 
@@ -202,7 +202,7 @@ screenshots/dashboard.png
 
 ---
 
-## 📈 Charts
+##  Charts
 
 > Add screenshot here
 
@@ -212,7 +212,7 @@ screenshots/charts.png
 
 ---
 
-## 🎯 Prediction Result
+##  Prediction Result
 
 > Add screenshot here
 
@@ -222,7 +222,7 @@ screenshots/result.png
 
 ---
 
-# 📈 Dataset Features
+# Dataset Features
 
 - Employee_ID
 - Department
@@ -243,7 +243,7 @@ screenshots/result.png
 - Employee_Satisfaction_Score
 - Resigned
 
-### 🎯 Target Variable
+###  Target Variable
 
 ```
 Performance_Score
@@ -251,7 +251,7 @@ Performance_Score
 
 ---
 
-# 🧠 Machine Learning Model
+#  Machine Learning Model
 
 | Algorithm | Random Forest Classifier |
 |-----------|--------------------------|
@@ -271,36 +271,36 @@ Performance Levels
 
 ---
 
-# 🚀 Future Improvements
+#  Future Improvements
 
-- 🔐 User Authentication
-- 🗄 MySQL Database Integration
-- 📋 Prediction History
-- 📄 PDF Report Generation
-- 📧 Email Notifications
-- ☁ Cloud Deployment
-- 📊 Live Dashboard Analytics
+-  User Authentication
+-  MySQL Database Integration
+-  Prediction History
+-  PDF Report Generation
+-  Email Notifications
+-  Cloud Deployment
+-  Live Dashboard Analytics
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
-**Your Name**
+**Zain ul abedin**
 
 GitHub:
-https://github.com/YourUsername
+https://github.com/Zain2262
 
 LinkedIn:
-https://linkedin.com/in/YourUsername
+https://linkedin.com/in/Zain_ul_abedin
 
 ---
 
-# ⭐ Support
+#  Support
 
 If you found this project useful, please consider giving it a ⭐ on GitHub.
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the MIT License.
