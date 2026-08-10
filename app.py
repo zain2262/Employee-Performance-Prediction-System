@@ -1,36 +1,44 @@
 from flask import Flask, render_template, request
 import joblib
-import numpy as np
+import pandas as pd
 
 app = Flask(__name__)
 
-# Load Trained Model
-model = joblib.load("model/performance_model.pkl")
+# Load trained pipeline
+pipeline = joblib.load("model/performance_prediction_pipeline.pkl")
 
 
+# Home Page
 @app.route("/")
 def home():
     return render_template("index.html")
 
+
+# Dashboard Page
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html")
 
 
+# About Page
 @app.route("/about")
 def about():
     return render_template("about.html")
 
 
+# Charts Page
 @app.route("/charts")
 def charts():
     return render_template("charts.html")
 
 
+# Contact Page
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
+
+# Prediction
 @app.route("/predict", methods=["POST"])
 def predict():
 
@@ -50,32 +58,34 @@ def predict():
     Team_Size = int(request.form["Team_Size"])
     Training_Hours = int(request.form["Training_Hours"])
     Promotions = int(request.form["Promotions"])
-    Employee_Satisfaction_Score = float(request.form["Employee_Satisfaction_Score"])
+    Employee_Satisfaction_Score = float(
+        request.form["Employee_Satisfaction_Score"]
+    )
     Resigned = int(request.form["Resigned"])
 
-    # Create feature array
-    features = np.array([[
-        Department,
-        Gender,
-        Age,
-        Job_Title,
-        Years_At_Company,
-        Education_Level,
-        Monthly_Salary,
-        Work_Hours_Per_Week,
-        Projects_Handled,
-        Overtime_Hours,
-        Sick_Days,
-        Remote_Work_Frequency,
-        Team_Size,
-        Training_Hours,
-        Promotions,
-        Employee_Satisfaction_Score,
-        Resigned
-    ]])
+    # Create DataFrame
+    features = pd.DataFrame([{
+        "Department": Department,
+        "Gender": Gender,
+        "Age": Age,
+        "Job_Title": Job_Title,
+        "Years_At_Company": Years_At_Company,
+        "Education_Level": Education_Level,
+        "Monthly_Salary": Monthly_Salary,
+        "Work_Hours_Per_Week": Work_Hours_Per_Week,
+        "Projects_Handled": Projects_Handled,
+        "Overtime_Hours": Overtime_Hours,
+        "Sick_Days": Sick_Days,
+        "Remote_Work_Frequency": Remote_Work_Frequency,
+        "Team_Size": Team_Size,
+        "Training_Hours": Training_Hours,
+        "Promotions": Promotions,
+        "Employee_Satisfaction_Score": Employee_Satisfaction_Score,
+        "Resigned": Resigned
+    }])
 
     # Prediction
-    prediction = int(model.predict(features)[0])
+    prediction = int(pipeline.predict(features)[0])
 
     # Performance Message
     if prediction == 1:
@@ -93,6 +103,7 @@ def predict():
     else:
         message = "Excellent Performance"
 
+    # Send result to result.html
     return render_template(
         "result.html",
         prediction=prediction,
@@ -100,5 +111,7 @@ def predict():
     )
 
 
+# Run Flask Application
 if __name__ == "__main__":
     app.run(debug=True)
+
